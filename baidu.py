@@ -258,15 +258,15 @@ class BaiDuPan(object):
         """
         响应：
         {
-    "path": "\/test\/kid1\/files\/file_content.json",
-    "uploadid": "N1-MjE4LjE5LjQ2LjIxOToxNjk1MTkxNzQ4OjMyNjAxNzk5OTgwODY4OTQxOA==",
-    "return_type": 1,
-    "block_list": [
-        0
-    ],
-    "errno": 0,
-    "request_id": 326017999808689418
-}
+            "path": "\/test\/kid1\/files\/file_content.json",
+            "uploadid": "N1-MjE4LjE5LjQ2LjIxOToxNjk1MTkxNzQ4OjMyNjAxNzk5OTgwODY4OTQxOA==",
+            "return_type": 1,
+            "block_list": [
+                0
+            ],
+            "errno": 0,
+            "request_id": 326017999808689418
+        }
         """
         super_url = 'https://xafj-ct10.pcs.baidu.com/rest/2.0/pcs/superfile2'
 
@@ -334,6 +334,113 @@ class BaiDuPan(object):
         response_content = json.loads(response.content.decode("utf-8"))
         print(response_content)
 
+    """
+    period 有效期 0-永久有效 1-一天 7-七天 30-三十天
+    pwd 是否设置提取码
+    """
+    def create_share_link(self, fid_list, period=7, pwd=True):
+        url = 'https://pan.baidu.com/share/set'
+        params = {
+            'channel': 'chunlei',
+            'bdstoken': '7ddec910b0beba5b3380362518c759bd',
+            'clienttyoe': 0,
+            'app_id': 250528,
+            'web': 1,
+            'dp-logid': '48041200215572110069'
+        }
+        if (pwd):
+            pwd = self.randomStr(4)
+
+        data = {
+            'schannel': 4,
+            'channel_list': '[]',
+            'period': period,
+            'pwd': pwd,
+            'fid_list': str(fid_list),
+        }
+        response = requests.post(url, headers=self.headers, params=params, data=data)
+        json_data = response.json()
+        if json_data['errno'] == 0:
+            return {'errno': 0, 'err_msg': '创建分享链接成功！', 'data': {'link': json_data['link'], 'pwd': pwd}}
+        else:
+            return {'errno': 1, 'err_msg': '创建分享链接失败！', 'data': json_data}
+
+    def share_to_friend(self, receiver, fs_ids, receiver_name):
+        return self.send(send_type=3, receiver=receiver, msg_type=2, msg="", fs_ids=fs_ids, receiver_name=receiver_name)
+
+    def send_msg_to_friend(self, receiver, msg, receiver_name):
+        return self.send(send_type=3, receiver=receiver, msg_type=1, msg=msg, fs_ids=[], receiver_name=receiver_name)
+
+    def share_to_group(self, receiver, fs_ids):
+        return self.send(send_type=4, receiver=receiver, msg_type=2, msg="", fs_ids=fs_ids)
+
+    def send_msg_to_group(self, receiver, msg):
+        return self.send(send_type=4, receiver=receiver, msg_type=1, msg=msg, fs_ids=[])
+
+    def send(self, send_type, receiver, msg_type, msg, fs_ids, receiver_name=""):
+        url = 'https://pan.baidu.com/imbox/msg/send'
+        params = {
+            'clienttype': '0',
+            'app_id': '250528',
+            'web': '1',
+            'dp-logid': '48041200215572110132'
+        }
+        _data = {
+            "send_type": send_type,
+            "receiver": receiver,
+            "msg_type": msg_type,
+            "msg": msg,
+            "fs_ids": fs_ids
+        }
+        if send_type == 3:
+            _data["receiver_name"] = receiver_name
+
+        data = {
+            'data': json.dumps(_data)
+        }
+        print(data)
+        response = requests.post(url, headers=self.headers, params=params, data=data)
+        json_data = response.json()
+        if json_data['errno'] == 0:
+            return {'errno': 0, 'err_msg': '分享成功', 'data': {}}
+        else:
+            return {'errno': 1, 'err_msg': '分享失败', 'data': json_data}
+
+    def get_group_list(self):
+        url = "https://pan.baidu.com/mbox/group/list"
+        params = {
+            'clienttype': '0',
+            'app_id': '250528',
+            'web': '1',
+            'dp-logid': '48041200215572110132',
+            'start': 0,
+            'limit': 20,
+            'type': 0
+        }
+        response = requests.get(url, headers=self.headers, params=params)
+        json_data = response.json()
+        if json_data['errno'] == 0:
+            return {'errno': 0, 'err_msg': '获取成功', 'data': json_data}
+        else:
+            return {'errno': 1, 'err_msg': '获取失败', 'data': json_data}
+
+    def get_friend_list(self):
+        url = "https://pan.baidu.com/mbox/relation/getfollowlist"
+        params = {
+            'clienttype': '0',
+            'app_id': '250528',
+            'web': '1',
+            'dp-logid': '48041200215572110132',
+            'start': 0,
+            'limit': 20
+        }
+        response = requests.get(url, headers=self.headers, params=params)
+        json_data = response.json()
+        if json_data['errno'] == 0:
+            return {'errno': 0, 'err_msg': '获取成功', 'data': json_data}
+        else:
+            return {'errno': 1, 'err_msg': '获取失败', 'data': json_data}
+
 
 if __name__ == "__main__":
     baidu = BaiDuPan()
@@ -348,3 +455,31 @@ if __name__ == "__main__":
     # baidu.file_folder_rename(['/test/new_name','/test/test2.txt'], ['new_name2','new_name.txt'])
     # baidu.file_folder_copy([{"path":"/test/new_name.txt","dest":"/test/kid2","newname":"new_name3.txt"},{"path":"/test/new_name.txt","dest":"/test/kid2"}])
     # baidu.file_folder_move([{"path":"/test/kid1/new_name.txt","dest":"/test/kid1/child4","newname":"new_name.txt"}])
+
+    # 创建分享链接
+    # r = baidu.create_share_link([690714735880835])
+    # print(r)
+
+    # 分享给好友
+    # r = baidu.share_to_friend(["914179002"], [190704352051208], ["fg**vc"])
+    # print(r)
+
+    # 发消息给好友
+    # r = baidu.send_msg_to_friend(["914179002"], "测试", ["fg**vc"])
+    # print(r)
+
+    # 获取群组列表
+    # r = baidu.get_group_list()
+    # print(r)
+
+    # 获取好友列表
+    r = baidu.get_friend_list()
+    print(r)
+
+    # 分享给群组
+    # r = baidu.share_to_group(["1048666503551696519"], [190704352051208])
+    # print(r)
+
+    # 发消息给群组
+    # r = baidu.send_msg_to_group(["1048666503551696519"], "测试")
+    # print(r)
