@@ -107,3 +107,60 @@ def test_file_folder_move():
                 moved_element = item
                 break
         assert moved_element is not None
+
+def test_get_recycle_list():
+    r=baidu.get_recycle_list()
+    # baidu.saveJson('./files/recycle.json',r)
+    assert (r['errno'] == 0)
+    assert isinstance(r['list'], list)
+
+def test_recycle_delete():
+    file_list1 = baidu.get_recycle_list()['list']
+    test_list=[1031287892492128]
+    r=baidu.recycle_delete(delete_list=test_list)
+    assert (r['errno'] == 0)
+    file_list2 = baidu.get_recycle_list()['list']
+    assert (file_list1 != file_list2)
+    new_elements = []
+    for item in file_list2:
+        if item not in file_list1:
+            new_elements.append(item)
+            break
+    for element in new_elements:
+        assert (element['fs_id'] in test_list)
+
+
+
+
+
+def test_recycle_restore():
+    # file_list1 = baidu.get_recycle_list()['list']
+    test_list=[461895645069165]
+    r=baidu.recycle_restore(restore_list=test_list)
+    assert (r['errno'] == 0)
+    assert(len(r['faillist'])==0)
+
+
+def test_recycle_clear():
+    r=baidu.recycle_clear()
+    assert (r['errno'] == 0)
+    is_ok=True
+    while(is_ok):
+        res=baidu.test_task_status(taskid=r['taskid'])
+        assert res
+        if res['status']=='success':
+            print('task done')
+            is_ok=False
+    r2=baidu.get_recycle_list()
+    assert (r2['errno'] == 0)
+    assert (len(r2['list'])==0)
+
+def test_get_quota():
+    r=baidu.get_quota()
+    assert (r['errno'] == 0)
+    assert (r['total'] != 0)
+    assert (r['used'] != 0)
+    print(r['total'] ,r['used'])
+
+
+test_get_quota()

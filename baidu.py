@@ -20,7 +20,7 @@ class BaiDuPan(object):
             'Host': 'pan.baidu.com',
             'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.120 Safari/537.36',
         }
-        self.headers['Cookie'] = 'BIDUPSID=1B00E53394E38DC5DF5A8A0C8AA12000; PSTM=1632669581; __yjs_duid=1_adc2e0996e2a2d5580f2714e4f7f1e501632669593304; BDUSS=mlRWUg0c3hJLU9ETzJybmhWaEw2b0RjMkVnM1BrZEZadTZLSXFwRTFiRW00OEpoRVFBQUFBJCQAAAAAAAAAAAEAAAAqoj5iw87Q0div0MTp5AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACZWm2EmVpthQ; PANWEB=1; Hm_lvt_fa0277816200010a74ab7d2895df481b=1672578884; BDUSS_BFESS=mlRWUg0c3hJLU9ETzJybmhWaEw2b0RjMkVnM1BrZEZadTZLSXFwRTFiRW00OEpoRVFBQUFBJCQAAAAAAAAAAAEAAAAqoj5iw87Q0div0MTp5AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACZWm2EmVpthQ; BAIDUID=733F6987812207206DB80042F6ED71D6:FG=1; H_WISE_SIDS=219946_114550_219564_216842_213357_214800_219943_213039_230178_204919_110085_236312_243706_243881_244726_245412_247146_250304_250890_249892_240590_254734_233835_253426_250887_255938_255979_107314_256083_253993_256121_256257_255661_255476_256500_254831_256739_251973_256589_257079_254075_257291_257284_254317_251058_257406_254299_255324_257542_257659_257745_257786_257938_257167_257903_258073_257823_257586_257401_255231_253900_258192_258248_257996_258525_258374_258369_258395_258641_258724_258728_258921_258938_257302_258982_258958_258698_230288_259049_259067_257576_259190_259193_256223_259405_259391_259430_211987_259568_259606_259626_256999_259558_259644_259648_251785_258773_234296_234207_259909_259888_259643_255909_8000088_8000102_8000120_8000135_8000149_8000166_8000175_8000178_8000188; H_WISE_SIDS_BFESS=219946_114550_219564_216842_213357_214800_219943_213039_230178_204919_110085_236312_243706_243881_244726_245412_247146_250304_250890_249892_240590_254734_233835_253426_250887_255938_255979_107314_256083_253993_256121_256257_255661_255476_256500_254831_256739_251973_256589_257079_254075_257291_257284_254317_251058_257406_254299_255324_257542_257659_257745_257786_257938_257167_257903_258073_257823_257586_257401_255231_253900_258192_258248_257996_258525_258374_258369_258395_258641_258724_258728_258921_258938_257302_258982_258958_258698_230288_259049_259067_257576_259190_259193_256223_259405_259391_259430_211987_259568_259606_259626_256999_259558_259644_259648_251785_258773_234296_234207_259909_259888_259643_255909_8000088_8000102_8000120_8000135_8000149_8000166_8000175_8000178_8000188; BDORZ=B490B5EBF6F3CD402E515D22BCDA1598; STOKEN=36c9178c694f4fc54aaed938525c5ebbfce3c03ce387eeb35425f28848a9f7d1; newlogin=1; Hm_lvt_7a3960b6f067eb0085b7f96ff5e660b0=1694927867; BDCLND=mB8yf%2BHwkT%2B9idq1LkrO%2FL%2B%2BZ%2FU9Kmn%2BapStpOCvSaM%3D; H_PS_PSSID=39311_39368_39353_39348_39407_39097_39411_39439_39345_39358_39307_39233_26350_39428; BAIDUID_BFESS=733F6987812207206DB80042F6ED71D6:FG=1; BA_HECTOR=aka4252ha02k8k0g81000k011igr7bt1o; ZFY=KlpL72Vxx5RSqpteBx:AWOEYyrC0r9NaXIamOqWZ5Ufo:C; BCLID=7283200180341604545; BCLID_BFESS=7283200180341604545; BDSFRCVID=_DkOJexroG0Jp3jqBOsK26-xHyNbUdrTDYrEjGc3VtzSGYLVFsQ6EG0Pts1-dEub6j30ogKK5mOTH6KF_2uxOjjg8UtVJeC6EG0Ptf8g0M5; BDSFRCVID_BFESS=_DkOJexroG0Jp3jqBOsK26-xHyNbUdrTDYrEjGc3VtzSGYLVFsQ6EG0Pts1-dEub6j30ogKK5mOTH6KF_2uxOjjg8UtVJeC6EG0Ptf8g0M5; H_BDCLCKID_SF=tbC8VCDKJKD3H48k-4QEbbQH-UnLqMCfW2OZ04n-ah02O4tRMRQIXntIDGDLhUv8BDrP0Pom3UTKsq76Wh35K5tTQP6rLf5eLRc4KKJxbP8aKJbH5tK-M6JQhUJiB5QLBan7_qvIXKohJh7FM4tW3J0ZyxomtfQxtNRJ0DnjtpChbC8lejuaj6bLeU5eetjK2CntsJOOaCvshpTOy4oWK441D-6jJ-TD0eOeBI_KH4n1JqrP3tOK3M04K4o9-hvT-54e2p3FBUQPqUDCQft20b0yDecb0RQaJDLeon7jWhkhDq72y5jvQlRX5q79atTMfNTJ-qcH0KQpsIJM5-DWbT8IjHCeJ6F8tRFfoCvMKRu_HRjYbb__-P4DennRaMRZ56bHWh0MWtt5j4jtXnbvD65D2-78WtjP5TrnKUT-3RcnHIOK5b66QpFT34jeQ6543bRTLP8hHRbpfJ_CM6-2hP-UyNoLWh37Je3lMKoaMp78jR093JO4y4Ldj4oxJpOJ5JbMopCafJOKHICmDjDWDUK; H_BDCLCKID_SF_BFESS=tbC8VCDKJKD3H48k-4QEbbQH-UnLqMCfW2OZ04n-ah02O4tRMRQIXntIDGDLhUv8BDrP0Pom3UTKsq76Wh35K5tTQP6rLf5eLRc4KKJxbP8aKJbH5tK-M6JQhUJiB5QLBan7_qvIXKohJh7FM4tW3J0ZyxomtfQxtNRJ0DnjtpChbC8lejuaj6bLeU5eetjK2CntsJOOaCvshpTOy4oWK441D-6jJ-TD0eOeBI_KH4n1JqrP3tOK3M04K4o9-hvT-54e2p3FBUQPqUDCQft20b0yDecb0RQaJDLeon7jWhkhDq72y5jvQlRX5q79atTMfNTJ-qcH0KQpsIJM5-DWbT8IjHCeJ6F8tRFfoCvMKRu_HRjYbb__-P4DennRaMRZ56bHWh0MWtt5j4jtXnbvD65D2-78WtjP5TrnKUT-3RcnHIOK5b66QpFT34jeQ6543bRTLP8hHRbpfJ_CM6-2hP-UyNoLWh37Je3lMKoaMp78jR093JO4y4Ldj4oxJpOJ5JbMopCafJOKHICmDjDWDUK; csrfToken=hs-CO2JWNcWKkMweFp9ruwBn; PANPSC=16162519696563325585%3ACU2JWesajwDE3oP99pMv7xGy4OU887ORVNbGxeMGSdR7gvgDy7JBfVZyeLTzW4IXgEmtLzrwSnIr2wqYbSNJzI7%2BuszIM%2FQF9jqImtiV9t4uRevHA8Yw6ivUNQZ%2Bmpo%2BKs%2BlyV4xxrIh7IX89yGaj01oE1oKWHdrHwnsXTVs8ITR4SeWmT6baF9K9yVk1uvA4i2i1JdCg%2BQoj3hBKvZymPgT7Eg6UyTb; ndut_fmt=360D694FAB922F36F0BC73F53860958E32592717115867F2511DD3566349DFF8; ab_sr=1.0.1_ZjBhNDM4N2JkZjY0ZDlhZGRhNjE5YTg4YWU0ZDExZGU5MmY2ZmRmMjE5NDk2ZmNlMzYxMzNlYWUwMGY4MTAxYzZiM2UyN2JkNzQ4NzFlNzFiNGE0M2I4N2RiNTIyYmU1NWYyN2RiYjU3NDA1Yzk5ZTc0N2EyZDVkMzUwMTk5MDMwYmM4MjAyODhkYzdiNWRiZWU1NWY4MjA3MGU0MWMyZGY3MTcxNjI2OGFjZDlhZGYwOGM5MTRlMDJmZWVmZmI4'
+        self.headers['Cookie'] = 'BIDUPSID=69E28713CEF4C74FC5B9B97E2E3E9651; PSTM=1686308325; BAIDUID=69E28713CEF4C74FFE683719516B4A50:FG=1; ZFY=Te0ugrPfZ:BGiG:BnHsCyv:AOr9ZvJr:AMJ1nNzVn:B4cqao:C; BAIDUID_BFESS=69E28713CEF4C74FFE683719516B4A50:FG=1; newlogin=1; BDUSS=WlOUG1FNjlmTnU4bndoaXAza0RkanVMSEJIZGV1aFlJZmVPdE9EZ2lWcDcyVEJsSVFBQUFBJCQAAAAAAAAAAAEAAAAqoj5iw87Q0div0MTp5AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHtMCWV7TAllZ; BDUSS_BFESS=WlOUG1FNjlmTnU4bndoaXAza0RkanVMSEJIZGV1aFlJZmVPdE9EZ2lWcDcyVEJsSVFBQUFBJCQAAAAAAAAAAAEAAAAqoj5iw87Q0div0MTp5AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHtMCWV7TAllZ; STOKEN=e2cf9f58dd40c71548dd5b7b83a63bdf8ef9f41d2c34dde2bb030bed97a03284; PANWEB=1; csrfToken=JSOeVxFSx5KYLwZa2zG7bRzl; PANPSC=9761528156153601569%3ACU2JWesajwDE3oP99pMv7xGy4OU887ORVNbGxeMGSdR7gvgDy7JBfVZyeLTzW4IXgEmtLzrwSnIr2wqYbSNJzI7%2BuszIM%2FQFqccih35HhdUuRevHA8Yw6ivUNQZ%2Bmpo%2BKs%2BlyV4xxrIh7IX89yGaj01oE1oKWHdrHwnsXTVs8ITR4SeWmT6baF9K9yVk1uvA4i2i1JdCg%2BQoj3hBKvZymPgT7Eg6UyTb; ndut_fmt=72BAEA0C96E84EF1F017E3EE63BB1112B239A10322D953F1062924C26EECAC3F; ab_sr=1.0.1_MmMxZjQ2MTg3YmEyNzE1MTIxMGQyNzA3NGU2NjA5ODRmNTQ4M2M3MWRhZmU1NGZhNWVhMDg4MWYzOGIyNGIxODM4YzNhYWZmOWUyOTQyMDAyZjhhNTAwNmVjMmE3NTc0YzhlZjVmOWQ2M2MzNDQyNDk4Y2RiMmRjNzcwZmQzNDEzNjVhODk3NjUyMWM1ODJjOTI2ZGM4ZTRhNzk0ZDZjODI0OTg4YWEwMzVjNDRkNWUzOWQwMzg5MGQ0YjFlM2U3'
 
     @staticmethod
     def saveJson(title, data):  # 将数据保存为json文件
@@ -431,6 +431,9 @@ class BaiDuPan(object):
             return {'errno': 1, 'err_msg': '获取失败', 'data': json_data}
 
     def get_friend_list(self):
+        """
+        回收站文件列表
+        """
         url = "https://pan.baidu.com/mbox/relation/getfollowlist"
         params = {
             'clienttype': '0',
@@ -447,6 +450,117 @@ class BaiDuPan(object):
         else:
             return {'errno': 1, 'err_msg': '获取失败', 'data': json_data}
 
+    def get_recycle_list(self):
+        url="https://pan.baidu.com/api/recycle/list"
+        # 载荷数据
+        payload = {
+            'clienttype': '0',
+            'app_id': '250528',
+            'web': '1',
+            'dp-logid': '91380000697342040025',
+            'num': '100',
+            'page': '1'
+        }
+        # 发送POST请求
+        response = requests.get(url, data=payload, headers=self.headers)
+        return json.loads(response.content.decode("utf-8"))
+
+    def recycle_delete(self,delete_list):
+        """
+        删除回收站文件，传入id列表
+        """
+        url="https://pan.baidu.com/api/recycle/delete"
+        payload = {
+            'bdstoken': 'c1bf432f74b461320ff1a46c5c0d38a0',
+            'app_id': '250528',
+            'channel': 'chunlei',
+            'web': '1',
+            'clienttype': '0',
+            'dp-logid': '48507800776512390044',
+            'async':'1',
+        }
+        delete_list_json = json.dumps(delete_list)
+        form_data = {
+            'fidlist': delete_list_json,
+        }
+        response = requests.post(url, headers=self.headers, data=form_data, params=payload)
+        response_content = json.loads(response.content.decode("utf-8"))
+        return response_content
+
+    def recycle_restore(self,restore_list):
+        """
+        还原回收站文件，传入id列表
+        """
+        url="https://pan.baidu.com/api/recycle/restore"
+        payload = {
+            'bdstoken': 'c1bf432f74b461320ff1a46c5c0d38a0',
+            'app_id': '250528',
+            'channel': 'chunlei',
+            'web': '1',
+            'clienttype': '0',
+            'dp-logid': '48507800776512390044',
+            'async':'1',
+        }
+        restore_list_json = json.dumps(restore_list)
+        form_data = {
+            'fidlist': restore_list_json,
+        }
+        response = requests.post(url, headers=self.headers, data=form_data, params=payload)
+        response_content = json.loads(response.content.decode("utf-8"))
+        return response_content
+
+    def recycle_clear(self):
+        """
+        清空回收站
+        """
+        url='https://pan.baidu.com/api/recycle/clear'
+        payload = {
+            'bdstoken': 'c1bf432f74b461320ff1a46c5c0d38a0',
+            'app_id': '250528',
+            'channel': 'chunlei',
+            'web': '1',
+            'clienttype': '0',
+            'dp-logid': '48507800776512390044',
+            'async':'1',
+        }
+        response = requests.post(url, headers=self.headers, params=payload)
+        response_content = json.loads(response.content.decode("utf-8"))
+        return response_content
+
+    def test_task_status(self,taskid):
+        """
+        测试任务状态
+        """
+        url="https://pan.baidu.com/share/taskquery"
+        payload = {
+            'app_id': '250528',
+            'channel': 'chunlei',
+            'web': '1',
+            'clienttype': '0',
+            'dp-logid': '48507800776512390044',
+            'taskid':f"{taskid}",
+        }
+        response = requests.post(url, headers=self.headers, params=payload)
+        response_content = json.loads(response.content.decode("utf-8"))
+        return response_content
+
+    def get_quota(self):
+        """
+        获取容量，返回total和used
+        """
+        url='https://pan.baidu.com/api/quota'
+        payload = {
+            'app_id': '250528',
+            'web': '1',
+            'clienttype': '0',
+            'dp-logid': '48507800776512390044',
+        }
+        response = requests.get(url, headers=self.headers, params=payload)
+        response_content = json.loads(response.content.decode("utf-8"))
+        #单位为GB
+        response_content['total']=response_content['total']/(1024*1024*1024)
+        response_content['used']=response_content['used']/(1024*1024*1024)
+        return response_content
 
 if __name__ == "__main__":
     baidu = BaiDuPan()
