@@ -20,7 +20,7 @@ class BaiDuPan(object):
             'Host': 'pan.baidu.com',
             'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.120 Safari/537.36',
         }
-        self.headers['Cookie'] = 'PANWEB=1; BIDUPSID=569C78CFDF8EDB06B5E81247D1B4D1E4; BAIDUID=9B587808DF1127A51C8E42336B18EC09:FG=1; PSTM=1682797646; BDUSS=3RXNWJ3RVFMbm0zVnk2OH43Rm1EV1RITDBReERjUFk3b1BxN1QzVk9GaDVNcUJrRVFBQUFBJCQAAAAAAAAAAAEAAAChnI3OV0NDWVpYWQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHmleGR5pXhkR; BDUSS_BFESS=3RXNWJ3RVFMbm0zVnk2OH43Rm1EV1RITDBReERjUFk3b1BxN1QzVk9GaDVNcUJrRVFBQUFBJCQAAAAAAAAAAAEAAAChnI3OV0NDWVpYWQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHmleGR5pXhkR; Hm_lvt_7a3960b6f067eb0085b7f96ff5e660b0=1689001027; STOKEN=76dca0c6950b2721c2b3968a150bdac0628d40c59cab9b57793eb9cf33154508; newlogin=1; BDCLND=sGwjLewAXYpZltYfX2rAtxVDjlxWAY2U5HBm%2FctcjcQ%3D; BAIDUID_BFESS=9B587808DF1127A51C8E42336B18EC09:FG=1; BDRCVFR[TCFer5TLIzY]=mk3SLVN4HKm; BA_HECTOR=85808gah8g212k010h81010c1igjcgl1p; ZFY=WkFG8KgRo4:BDXp5tefZD3SA2lJrVe:A7hUYR:AHZlokoI:C; delPer=0; PSINO=7; H_PS_PSSID=; BDORZ=FFFB88E999055A3F8A630C64834BD6D0; BCLID=7882234929788843196; BCLID_BFESS=7882234929788843196; BDSFRCVID=eA_OJexroG0Jp3jqWExZMBPfq9NbUdrTDYrEjGc3VtzSGYLVFsQ6EG0Pts1-dEub6j30ogKK3gOTH4DF_2uxOjjg8UtVJeC6EG0Ptf8g0M5; BDSFRCVID_BFESS=eA_OJexroG0Jp3jqWExZMBPfq9NbUdrTDYrEjGc3VtzSGYLVFsQ6EG0Pts1-dEub6j30ogKK3gOTH4DF_2uxOjjg8UtVJeC6EG0Ptf8g0M5; H_BDCLCKID_SF=tbC8VCDKJKD3H48k-4QEbbQH-UnLqboxLgOZ04n-ah02O4tRMRQRQJv-Xt5TKJ_8BDrP0Pom3UTKsq76Wh35K5tTQP6rLf5eLRc4KKJxbP8aKJbH5tK-M6JQhUJiB5JMBan7_pbIXKohJh7FM4tW3J0ZyxomtfQxtNRJ0DnjtpChbC8lejuaj6bLeU5eetjK2CntsJOOaCvnHj6Oy4oWK441D-6jJ-TDQ2TOLh6PLnQabqrP3tOK3M04K4o9-hvT-54e2p3FBUQPqUDCQft20b0yDecb0RQaJDLeon7jWhk5ep72y5OUQlRX5q79atTMfNTJ-qcH0KQpsIJM5-DWbT8IjHCeJ6F8tRFfoCvMKRu_HRjYbb__-P4DeUoCyMRZ56bHWh0MWtt5j4j5QJ7AXfDrblL8WtjP5TrnKUT-3RcnHIOK5b66QpFT34jeQ6543bRTLP8hHRbpfJ_CM6-2hP-UyNbMWh37JgnlMKoaMp78jR093JO4y4Ldj4oxJpOJ5JbMopCafJOKHICCe58W3e; H_BDCLCKID_SF_BFESS=tbC8VCDKJKD3H48k-4QEbbQH-UnLqboxLgOZ04n-ah02O4tRMRQRQJv-Xt5TKJ_8BDrP0Pom3UTKsq76Wh35K5tTQP6rLf5eLRc4KKJxbP8aKJbH5tK-M6JQhUJiB5JMBan7_pbIXKohJh7FM4tW3J0ZyxomtfQxtNRJ0DnjtpChbC8lejuaj6bLeU5eetjK2CntsJOOaCvnHj6Oy4oWK441D-6jJ-TDQ2TOLh6PLnQabqrP3tOK3M04K4o9-hvT-54e2p3FBUQPqUDCQft20b0yDecb0RQaJDLeon7jWhk5ep72y5OUQlRX5q79atTMfNTJ-qcH0KQpsIJM5-DWbT8IjHCeJ6F8tRFfoCvMKRu_HRjYbb__-P4DeUoCyMRZ56bHWh0MWtt5j4j5QJ7AXfDrblL8WtjP5TrnKUT-3RcnHIOK5b66QpFT34jeQ6543bRTLP8hHRbpfJ_CM6-2hP-UyNbMWh37JgnlMKoaMp78jR093JO4y4Ldj4oxJpOJ5JbMopCafJOKHICCe58W3e; csrfToken=thgW-VWTdJ-r43ac1Qrds1Cv; ndut_fmt=5AEC70BE75BDF0A6914D2B021B150C1906EE5B47A5F78CE0996E6D4E298E4005; ab_sr=1.0.1_ZmM4MDNlNWJlZWMxN2JlYWIxNzQ2NGQzMjgxZjIwZTc4MTA0OTQwMjM4NTNlZWZkZjYxNGM1ZDRiMjExMWNjYzAzYzNkNGZkYTAwOGViYzYyZmVmZTZhNjVlNDhmNTZiZjdmODdiYzZmNWNlNDJlYzYyYTA1MDlhMzkzY2VmY2QyZGVkYTk5NGIyNWJlYTY3NTUwYzU5YTdhNjE1ZGJhNjUwNjdlNmFiYmQwZmU5N2NhNzUyZWQzMTkyMjBjYjgy; BDRCVFR[A7hGrXFW48R]=K7PavkeTFPTUAN8ULuEQhPEUi4WU6; PANPSC=8094379039185159467%3A1hnZu9bM3mwLsjdBXCoJYFcS2d9ns3O5g0mIZdLHpdQGbqupDlB1gj8zEKyc7S8aV7l9pmSq0a3iLaLUl0KD5De4ZdaW7CoOlL98c8Ccr9ch6uZoP3DwQ9YfJggg9xZJTIlFK73X2ycdYSVq47DcpxufsfK5CTEPuA2SiUJ1YXJZKxE7zkGtkN7ltA6NmG2y'
+        self.headers['Cookie'] = 'BIDUPSID=1B00E53394E38DC5DF5A8A0C8AA12000; PSTM=1632669581; __yjs_duid=1_adc2e0996e2a2d5580f2714e4f7f1e501632669593304; BDUSS=mlRWUg0c3hJLU9ETzJybmhWaEw2b0RjMkVnM1BrZEZadTZLSXFwRTFiRW00OEpoRVFBQUFBJCQAAAAAAAAAAAEAAAAqoj5iw87Q0div0MTp5AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACZWm2EmVpthQ; PANWEB=1; Hm_lvt_fa0277816200010a74ab7d2895df481b=1672578884; BDUSS_BFESS=mlRWUg0c3hJLU9ETzJybmhWaEw2b0RjMkVnM1BrZEZadTZLSXFwRTFiRW00OEpoRVFBQUFBJCQAAAAAAAAAAAEAAAAqoj5iw87Q0div0MTp5AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACZWm2EmVpthQ; BAIDUID=733F6987812207206DB80042F6ED71D6:FG=1; H_WISE_SIDS=219946_114550_219564_216842_213357_214800_219943_213039_230178_204919_110085_236312_243706_243881_244726_245412_247146_250304_250890_249892_240590_254734_233835_253426_250887_255938_255979_107314_256083_253993_256121_256257_255661_255476_256500_254831_256739_251973_256589_257079_254075_257291_257284_254317_251058_257406_254299_255324_257542_257659_257745_257786_257938_257167_257903_258073_257823_257586_257401_255231_253900_258192_258248_257996_258525_258374_258369_258395_258641_258724_258728_258921_258938_257302_258982_258958_258698_230288_259049_259067_257576_259190_259193_256223_259405_259391_259430_211987_259568_259606_259626_256999_259558_259644_259648_251785_258773_234296_234207_259909_259888_259643_255909_8000088_8000102_8000120_8000135_8000149_8000166_8000175_8000178_8000188; H_WISE_SIDS_BFESS=219946_114550_219564_216842_213357_214800_219943_213039_230178_204919_110085_236312_243706_243881_244726_245412_247146_250304_250890_249892_240590_254734_233835_253426_250887_255938_255979_107314_256083_253993_256121_256257_255661_255476_256500_254831_256739_251973_256589_257079_254075_257291_257284_254317_251058_257406_254299_255324_257542_257659_257745_257786_257938_257167_257903_258073_257823_257586_257401_255231_253900_258192_258248_257996_258525_258374_258369_258395_258641_258724_258728_258921_258938_257302_258982_258958_258698_230288_259049_259067_257576_259190_259193_256223_259405_259391_259430_211987_259568_259606_259626_256999_259558_259644_259648_251785_258773_234296_234207_259909_259888_259643_255909_8000088_8000102_8000120_8000135_8000149_8000166_8000175_8000178_8000188; BDORZ=B490B5EBF6F3CD402E515D22BCDA1598; STOKEN=36c9178c694f4fc54aaed938525c5ebbfce3c03ce387eeb35425f28848a9f7d1; newlogin=1; Hm_lvt_7a3960b6f067eb0085b7f96ff5e660b0=1694927867; BDCLND=mB8yf%2BHwkT%2B9idq1LkrO%2FL%2B%2BZ%2FU9Kmn%2BapStpOCvSaM%3D; H_PS_PSSID=39311_39368_39353_39348_39407_39097_39411_39439_39345_39358_39307_39233_26350_39428; BAIDUID_BFESS=733F6987812207206DB80042F6ED71D6:FG=1; BA_HECTOR=aka4252ha02k8k0g81000k011igr7bt1o; ZFY=KlpL72Vxx5RSqpteBx:AWOEYyrC0r9NaXIamOqWZ5Ufo:C; BCLID=7283200180341604545; BCLID_BFESS=7283200180341604545; BDSFRCVID=_DkOJexroG0Jp3jqBOsK26-xHyNbUdrTDYrEjGc3VtzSGYLVFsQ6EG0Pts1-dEub6j30ogKK5mOTH6KF_2uxOjjg8UtVJeC6EG0Ptf8g0M5; BDSFRCVID_BFESS=_DkOJexroG0Jp3jqBOsK26-xHyNbUdrTDYrEjGc3VtzSGYLVFsQ6EG0Pts1-dEub6j30ogKK5mOTH6KF_2uxOjjg8UtVJeC6EG0Ptf8g0M5; H_BDCLCKID_SF=tbC8VCDKJKD3H48k-4QEbbQH-UnLqMCfW2OZ04n-ah02O4tRMRQIXntIDGDLhUv8BDrP0Pom3UTKsq76Wh35K5tTQP6rLf5eLRc4KKJxbP8aKJbH5tK-M6JQhUJiB5QLBan7_qvIXKohJh7FM4tW3J0ZyxomtfQxtNRJ0DnjtpChbC8lejuaj6bLeU5eetjK2CntsJOOaCvshpTOy4oWK441D-6jJ-TD0eOeBI_KH4n1JqrP3tOK3M04K4o9-hvT-54e2p3FBUQPqUDCQft20b0yDecb0RQaJDLeon7jWhkhDq72y5jvQlRX5q79atTMfNTJ-qcH0KQpsIJM5-DWbT8IjHCeJ6F8tRFfoCvMKRu_HRjYbb__-P4DennRaMRZ56bHWh0MWtt5j4jtXnbvD65D2-78WtjP5TrnKUT-3RcnHIOK5b66QpFT34jeQ6543bRTLP8hHRbpfJ_CM6-2hP-UyNoLWh37Je3lMKoaMp78jR093JO4y4Ldj4oxJpOJ5JbMopCafJOKHICmDjDWDUK; H_BDCLCKID_SF_BFESS=tbC8VCDKJKD3H48k-4QEbbQH-UnLqMCfW2OZ04n-ah02O4tRMRQIXntIDGDLhUv8BDrP0Pom3UTKsq76Wh35K5tTQP6rLf5eLRc4KKJxbP8aKJbH5tK-M6JQhUJiB5QLBan7_qvIXKohJh7FM4tW3J0ZyxomtfQxtNRJ0DnjtpChbC8lejuaj6bLeU5eetjK2CntsJOOaCvshpTOy4oWK441D-6jJ-TD0eOeBI_KH4n1JqrP3tOK3M04K4o9-hvT-54e2p3FBUQPqUDCQft20b0yDecb0RQaJDLeon7jWhkhDq72y5jvQlRX5q79atTMfNTJ-qcH0KQpsIJM5-DWbT8IjHCeJ6F8tRFfoCvMKRu_HRjYbb__-P4DennRaMRZ56bHWh0MWtt5j4jtXnbvD65D2-78WtjP5TrnKUT-3RcnHIOK5b66QpFT34jeQ6543bRTLP8hHRbpfJ_CM6-2hP-UyNoLWh37Je3lMKoaMp78jR093JO4y4Ldj4oxJpOJ5JbMopCafJOKHICmDjDWDUK; csrfToken=hs-CO2JWNcWKkMweFp9ruwBn; PANPSC=16162519696563325585%3ACU2JWesajwDE3oP99pMv7xGy4OU887ORVNbGxeMGSdR7gvgDy7JBfVZyeLTzW4IXgEmtLzrwSnIr2wqYbSNJzI7%2BuszIM%2FQF9jqImtiV9t4uRevHA8Yw6ivUNQZ%2Bmpo%2BKs%2BlyV4xxrIh7IX89yGaj01oE1oKWHdrHwnsXTVs8ITR4SeWmT6baF9K9yVk1uvA4i2i1JdCg%2BQoj3hBKvZymPgT7Eg6UyTb; ndut_fmt=360D694FAB922F36F0BC73F53860958E32592717115867F2511DD3566349DFF8; ab_sr=1.0.1_ZjBhNDM4N2JkZjY0ZDlhZGRhNjE5YTg4YWU0ZDExZGU5MmY2ZmRmMjE5NDk2ZmNlMzYxMzNlYWUwMGY4MTAxYzZiM2UyN2JkNzQ4NzFlNzFiNGE0M2I4N2RiNTIyYmU1NWYyN2RiYjU3NDA1Yzk5ZTc0N2EyZDVkMzUwMTk5MDMwYmM4MjAyODhkYzdiNWRiZWU1NWY4MjA3MGU0MWMyZGY3MTcxNjI2OGFjZDlhZGYwOGM5MTRlMDJmZWVmZmI4'
 
     @staticmethod
     def saveJson(title, data):  # 将数据保存为json文件
@@ -103,12 +103,6 @@ class BaiDuPan(object):
         search_content = json.loads(response.content.decode("utf-8"))
         return search_content
 
-    def file_folder_share(self):
-        """
-          - 分享
-        """
-        url = 'https://pan.baidu.com/share/set'
-
     def folder_add(self, path, folder_name):
         """
         添加文件夹
@@ -116,11 +110,11 @@ class BaiDuPan(object):
         url = 'https://pan.baidu.com/api/create'
         payload = {
             'a': 'commit',
-            'bdstoken': 'c1bf432f74b461320ff1a46c5c0d38a0',
+            'bdstoken': '8a902ff8d133bc0b26e061b565dffe53',
             'clienttype': '0',
             'app_id': '250528',
             'web': '1',
-            'dp-logid': '12808300274012460052',
+            'dp-logid': '43865200699754060045',
         }
         form_data = {
             'path': f'{path}{folder_name}',
@@ -130,7 +124,7 @@ class BaiDuPan(object):
         response = requests.post(
             url, headers=self.headers, data=form_data, params=payload)
         response_content = json.loads(response.content.decode("utf-8"))
-        print(response_content)
+        return response_content
 
     def file_folder_delete(self, delete_list: list[str]):
         """
@@ -155,7 +149,7 @@ class BaiDuPan(object):
         response = requests.post(
             url, headers=self.headers, data=form_data, params=payload)
         response_content = json.loads(response.content.decode("utf-8"))
-        print(response_content)
+        return response_content
 
     def file_folder_rename(self, paths, new_names):
         """
@@ -182,7 +176,7 @@ class BaiDuPan(object):
         response = requests.post(
             url, headers=self.headers, data=form_data, params=payload)
         response_content = json.loads(response.content.decode("utf-8"))
-        print(response_content)
+        return response_content
 
     def file_folder_copy(self, copy_list):
         """
@@ -212,7 +206,7 @@ class BaiDuPan(object):
         response = requests.post(
             url, headers=self.headers, data=form_data, params=payload)
         response_content = json.loads(response.content.decode("utf-8"))
-        print(response_content)
+        return response_content
 
     def file_folder_move(self, move_list):
         """
@@ -242,7 +236,7 @@ class BaiDuPan(object):
         response = requests.post(
             url, headers=self.headers, data=form_data, params=payload)
         response_content = json.loads(response.content.decode("utf-8"))
-        print(response_content)
+        return response_content
 
     def floder_push(self):
         """
@@ -347,6 +341,7 @@ class BaiDuPan(object):
     period 有效期 0-永久有效 1-一天 7-七天 30-三十天
     pwd 是否设置提取码
     """
+
     def create_share_link(self, fid_list, period=7, pwd=True):
         url = 'https://pan.baidu.com/share/set'
         params = {
@@ -367,7 +362,8 @@ class BaiDuPan(object):
             'pwd': pwd,
             'fid_list': str(fid_list),
         }
-        response = requests.post(url, headers=self.headers, params=params, data=data)
+        response = requests.post(
+            url, headers=self.headers, params=params, data=data)
         json_data = response.json()
         if json_data['errno'] == 0:
             return {'errno': 0, 'err_msg': '创建分享链接成功！', 'data': {'link': json_data['link'], 'pwd': pwd}}
@@ -408,7 +404,8 @@ class BaiDuPan(object):
             'data': json.dumps(_data)
         }
         print(data)
-        response = requests.post(url, headers=self.headers, params=params, data=data)
+        response = requests.post(
+            url, headers=self.headers, params=params, data=data)
         json_data = response.json()
         if json_data['errno'] == 0:
             return {'errno': 0, 'err_msg': '分享成功', 'data': {}}
@@ -482,8 +479,8 @@ if __name__ == "__main__":
     # print(r)
 
     # 获取好友列表
-    r = baidu.get_friend_list()
-    print(r)
+    # r = baidu.get_friend_list()
+    # print(r)
 
     # 分享给群组
     # r = baidu.share_to_group(["1048666503551696519"], [190704352051208])
