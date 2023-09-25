@@ -6,7 +6,7 @@
             "type": "python",
             "request": "launch",
             "program": "${file}",
-            "pythonPath": "/huiliang/miniconda3/envs/baidu/bin/python",
+            "python": "/huiliang/miniconda3/envs/baidu/bin/python",
             "console": "integratedTerminal"
         }
     ]
