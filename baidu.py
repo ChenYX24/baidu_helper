@@ -20,7 +20,8 @@ class BaiDuPan(object):
             'Host': 'pan.baidu.com',
             'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.120 Safari/537.36',
         }
-        self.headers['Cookie'] = 'BIDUPSID=69E28713CEF4C74FC5B9B97E2E3E9651; PSTM=1686308325; BAIDUID=69E28713CEF4C74FFE683719516B4A50:FG=1; ZFY=Te0ugrPfZ:BGiG:BnHsCyv:AOr9ZvJr:AMJ1nNzVn:B4cqao:C; BAIDUID_BFESS=69E28713CEF4C74FFE683719516B4A50:FG=1; newlogin=1; BDUSS=WlOUG1FNjlmTnU4bndoaXAza0RkanVMSEJIZGV1aFlJZmVPdE9EZ2lWcDcyVEJsSVFBQUFBJCQAAAAAAAAAAAEAAAAqoj5iw87Q0div0MTp5AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHtMCWV7TAllZ; BDUSS_BFESS=WlOUG1FNjlmTnU4bndoaXAza0RkanVMSEJIZGV1aFlJZmVPdE9EZ2lWcDcyVEJsSVFBQUFBJCQAAAAAAAAAAAEAAAAqoj5iw87Q0div0MTp5AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHtMCWV7TAllZ; STOKEN=e2cf9f58dd40c71548dd5b7b83a63bdf8ef9f41d2c34dde2bb030bed97a03284; PANWEB=1; csrfToken=JSOeVxFSx5KYLwZa2zG7bRzl; PANPSC=9761528156153601569%3ACU2JWesajwDE3oP99pMv7xGy4OU887ORVNbGxeMGSdR7gvgDy7JBfVZyeLTzW4IXgEmtLzrwSnIr2wqYbSNJzI7%2BuszIM%2FQFqccih35HhdUuRevHA8Yw6ivUNQZ%2Bmpo%2BKs%2BlyV4xxrIh7IX89yGaj01oE1oKWHdrHwnsXTVs8ITR4SeWmT6baF9K9yVk1uvA4i2i1JdCg%2BQoj3hBKvZymPgT7Eg6UyTb; ndut_fmt=72BAEA0C96E84EF1F017E3EE63BB1112B239A10322D953F1062924C26EECAC3F; ab_sr=1.0.1_MmMxZjQ2MTg3YmEyNzE1MTIxMGQyNzA3NGU2NjA5ODRmNTQ4M2M3MWRhZmU1NGZhNWVhMDg4MWYzOGIyNGIxODM4YzNhYWZmOWUyOTQyMDAyZjhhNTAwNmVjMmE3NTc0YzhlZjVmOWQ2M2MzNDQyNDk4Y2RiMmRjNzcwZmQzNDEzNjVhODk3NjUyMWM1ODJjOTI2ZGM4ZTRhNzk0ZDZjODI0OTg4YWEwMzVjNDRkNWUzOWQwMzg5MGQ0YjFlM2U3'
+        self.headers['Cookie'] = 'PANWEB=1; BIDUPSID=569C78CFDF8EDB06B5E81247D1B4D1E4; BAIDUID=9B587808DF1127A51C8E42336B18EC09:FG=1; PSTM=1682797646; BDUSS=3RXNWJ3RVFMbm0zVnk2OH43Rm1EV1RITDBReERjUFk3b1BxN1QzVk9GaDVNcUJrRVFBQUFBJCQAAAAAAAAAAAEAAAChnI3OV0NDWVpYWQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHmleGR5pXhkR; BDUSS_BFESS=3RXNWJ3RVFMbm0zVnk2OH43Rm1EV1RITDBReERjUFk3b1BxN1QzVk9GaDVNcUJrRVFBQUFBJCQAAAAAAAAAAAEAAAChnI3OV0NDWVpYWQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHmleGR5pXhkR; Hm_lvt_7a3960b6f067eb0085b7f96ff5e660b0=1689001027; STOKEN=76dca0c6950b2721c2b3968a150bdac0628d40c59cab9b57793eb9cf33154508; newlogin=1; BDCLND=C5yyAmZyfB29vVwj7jZkBqPWOg8%2FRAP48Iwdr9Ud3dg%3D; BDORZ=B490B5EBF6F3CD402E515D22BCDA1598; BA_HECTOR=ak8ga50k0la08h0g24a00ha11ih0leu1o; BAIDUID_BFESS=9B587808DF1127A51C8E42336B18EC09:FG=1; ZFY=WkFG8KgRo4:BDXp5tefZD3SA2lJrVe:A7hUYR:AHZlokoI:C; BDRCVFR[A7hGrXFW48R]=K7PavkeTFPTUAN8ULuEQhPEUi4WU6; delPer=0; PSINO=7; H_PS_PSSID=; BCLID=7927155295829643982; BCLID_BFESS=7927155295829643982; BDSFRCVID=mh0OJexroG0Jp3jqLjAtUGQAq9NbUdrTDYrEjGc3VtzSGYLVFsQ6EG0Pts1-dEub6j30ogKK3gOTH4DF_2uxOjjg8UtVJeC6EG0Ptf8g0M5; BDSFRCVID_BFESS=mh0OJexroG0Jp3jqLjAtUGQAq9NbUdrTDYrEjGc3VtzSGYLVFsQ6EG0Pts1-dEub6j30ogKK3gOTH4DF_2uxOjjg8UtVJeC6EG0Ptf8g0M5; H_BDCLCKID_SF=tbC8VCDKJKD3qbjkq45HMt00qxby26nL2nR9aJ5y-J7nhhcxDP6aX-IF5boxQxoDfmoa-Rb-QpbZql5FQP-53R0h0PJkWp5l-aCqKl0MLPb5hj6gQJoDj4TyDMnMBMPe52OnaIbg3fAKftnOM46JehL3346-35543bRTLnLy5KJYMDcnK4-XDjv-ja3P; H_BDCLCKID_SF_BFESS=tbC8VCDKJKD3qbjkq45HMt00qxby26nL2nR9aJ5y-J7nhhcxDP6aX-IF5boxQxoDfmoa-Rb-QpbZql5FQP-53R0h0PJkWp5l-aCqKl0MLPb5hj6gQJoDj4TyDMnMBMPe52OnaIbg3fAKftnOM46JehL3346-35543bRTLnLy5KJYMDcnK4-XDjv-ja3P; csrfToken=kswbPTmX5H6s598OiUIYGE8C; PANPSC=15088746456319812258%3ACU2JWesajwBnNvvdNG4edXlibiKzYuqj794Wtru%2Fr%2BvPzW21GgvS0EpDgNqxv39m9A4kqmeNpniyyezoC8D9eCHshfz3IZqPfgNp%2FcPxBVMaBZg5n%2FiXPtHhJ5aZPptowFxgyqx8xpJ3j5cyRAFOLeuRyJw0N0kmbxWPshska6GMVj%2BP8sFRaA%3D%3D; ndut_fmt=293683363292E52764C557F4DE452C21D6FAAA87822C3B19A5A17A39B8A70117; ab_sr=1.0.1_NWRlYjYzM2E1NDBjZjFjNWU5MmE0NWFmOTYxMDRhNWYxMDI4Mjk5YmUyYzExZjg1OWEwOTIzMjU0N2YyZDcwNjhlZjlkNWRhYTZlZDE3NTA4NWI2NjliOGFkYWMxYjEzZDQwODcwMjI4OTAzZGYxOWFlMGVkMDY4OGI3NWY1MWZmZTU3OTFlMThmMzdhZjhjODFjZmEzZWMxNjU0MmMyMGMyNThjODgxM2Y4ODIyZDNkNDM3ODBjMzU4MTE4NDVm'
+
 
     @staticmethod
     def saveJson(title, data):  # 将数据保存为json文件
@@ -562,6 +563,74 @@ class BaiDuPan(object):
         response_content['used']=response_content['used']/(1024*1024*1024)
         return response_content
 
+    def get_file_library_share_list(self, gid):
+        url = "https://pan.baidu.com/mbox/group/listshare"
+        param = {
+            'clienttype': '0',
+            'app_id': '250528',
+            'web': '1',
+            'dp-logid': '61012000932444830068',
+            'type': '2',
+            'gid': gid,
+            'limit': '50',
+            'desc': '1'
+        }
+        response = requests.get(url, headers=self.headers, params=param)
+        json_data = response.json()
+        if json_data['errno'] == 0:
+            return {'errno': 0, 'err_msg': '获取成功', 'data': json_data['records']}
+        else:
+            return {'errno': 1, 'err_msg': '获取失败', 'data': json_data}
+
+    def get_file_library_file_list(self, msg_id, page, fs_id, gid):
+        url = "https://pan.baidu.com/mbox/msg/shareinfo"
+        param = {
+            'from_uk': '3355235038',
+            'msg_id': msg_id,
+            'type': '2',
+            'num': '50',
+            'page': page,
+            'fs_id': fs_id,
+            'gid': gid,
+            'limit': '50',
+            'desc': '1',
+            'clienttype': '0',
+            'app_id': '250528',
+            'web': '1',
+            'dp-logid': '61012000932444830074'
+        }
+        response = requests.get(url, headers=self.headers, params=param)
+        json_data = response.json()
+        if json_data['errno'] == 0:
+            return {'errno': 0, 'err_msg': '获取成功', 'data': json_data['records']}
+        else:
+            return {'errno': 1, 'err_msg': '获取失败', 'data': json_data}
+
+    def file_library_search(self, keyword):
+        url = "https://pan.baidu.com/basembox/group/search"
+        param = {
+            'clienttype': '0',
+            'app_id': '250528',
+            'web': '1',
+            'dp-logid': '61012000932444830074'
+        }
+        _data = {
+            "gid": ["1087053125946517873"],
+            "key_word": keyword,
+            "sign": "NDNjZTc0NTU2ZmZjYWFkMjljODMyMDExZmFlMTMyYjY="
+        }
+        data = {
+            'data': json.dumps(_data)
+        }
+        response = requests.post(url, headers=self.headers, params=param, data = data)
+        json_data = response.json()
+        if json_data['errno'] == 0:
+            return {'errno': 0, 'err_msg': '获取成功', 'data': json_data['result']}
+        else:
+            return {'errno': 1, 'err_msg': '获取失败', 'data': json_data}
+
+
+
 if __name__ == "__main__":
     baidu = BaiDuPan()
     # file_content = baidu.get_file_list(dir='/test')
@@ -603,3 +672,15 @@ if __name__ == "__main__":
     # 发消息给群组
     # r = baidu.send_msg_to_group(["1048666503551696519"], "测试")
     # print(r)
+
+    # 文件库分享列表
+    # r = baidu.get_file_library_share_list('1087053125946517873')
+    # print(r)
+
+    # 文件库文件列表
+    # r = baidu.get_file_library_file_list('4774198092861403563', 1, '618002742019096', '1087053125946517873')
+    # print(r)
+
+    # 文件库搜索
+    r = baidu.file_library_search("线代")
+    print(r)
