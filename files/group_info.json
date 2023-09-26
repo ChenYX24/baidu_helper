@@ -1,0 +1,152 @@
+{
+    "errno": 0,
+    "newno": "",
+    "request_id": 4043325267366451283,
+    "sessions": [
+        {
+            "account_type": 0,
+            "has_more": false,
+            "istop": false,
+            "msgrecord": [
+                {
+                    "cursor": 1695692507116,
+                    "displayname": "x__charon__x",
+                    "file_list": [],
+                    "from_avatar": "https://himg.bdimg.com/sys/portrait/item/public.1.bef28233.RZ8MTOcoLQmi3jorQuPoww.jpg",
+                    "from_uk": 2724619489,
+                    "groupid": "161744937904444759",
+                    "identity": 0,
+                    "is_official": 0,
+                    "link": "",
+                    "link_count": 0,
+                    "link_type": 0,
+                    "msg": "test",
+                    "msgid": "3729762351126638671",
+                    "msgtype": 100,
+                    "sendtype": 4,
+                    "sessionid": "04_161744937904444759",
+                    "user_label": 0,
+                    "widget_info": null
+                },
+                {
+                    "cursor": 1695692497212,
+                    "displayname": "x__charon__x",
+                    "file_list": [],
+                    "from_avatar": "https://himg.bdimg.com/sys/portrait/item/public.1.bef28233.RZ8MTOcoLQmi3jorQuPoww.jpg",
+                    "from_uk": 2724619489,
+                    "groupid": "161744937904444759",
+                    "identity": 0,
+                    "is_official": 0,
+                    "link": "",
+                    "link_count": 0,
+                    "link_type": 0,
+                    "msg": "11",
+                    "msgid": "1990737215137178700",
+                    "msgtype": 100,
+                    "sendtype": 4,
+                    "sessionid": "04_161744937904444759",
+                    "user_label": 0,
+                    "widget_info": null
+                },
+                {
+                    "cursor": 1695692493816,
+                    "displayname": "\u7cfb\u7edf\u901a\u77e5",
+                    "file_list": [],
+                    "from_avatar": "https://ss0.bdstatic.com/7Ls0a8Sm1A5BphGlnYG/sys/portrait/item/netdisk.1.7050af2.0LIVnmHKESTaio22r9vMvA.jpg",
+                    "from_uk": 282335,
+                    "groupid": "161744937904444759",
+                    "identity": 0,
+                    "is_official": 0,
+                    "link": "",
+                    "link_count": 0,
+                    "link_type": 0,
+                    "msg": "",
+                    "msgid": "3858561628986286984",
+                    "msgtype": 103,
+                    "sendtype": 4,
+                    "sessionid": "04_161744937904444759",
+                    "user_label": 0,
+                    "widget_info": null
+                },
+                {
+                    "cursor": 1695692493773,
+                    "displayname": "\u7cfb\u7edf\u901a\u77e5",
+                    "file_list": [],
+                    "from_avatar": "https://ss0.bdstatic.com/7Ls0a8Sm1A5BphGlnYG/sys/portrait/item/netdisk.1.7050af2.0LIVnmHKESTaio22r9vMvA.jpg",
+                    "from_uk": 282335,
+                    "groupid": "161744937904444759",
+                    "identity": 0,
+                    "is_official": 0,
+                    "link": "",
+                    "link_count": 0,
+                    "link_type": 0,
+                    "msg": "",
+                    "msgid": "4594596786876996585",
+                    "msgtype": 103,
+                    "sendtype": 4,
+                    "sessionid": "04_161744937904444759",
+                    "user_label": 0,
+                    "widget_info": null
+                },
+                {
+                    "cursor": 1695692493727,
+                    "displayname": "\u7cfb\u7edf\u901a\u77e5",
+                    "file_list": [],
+                    "from_avatar": "https://ss0.bdstatic.com/7Ls0a8Sm1A5BphGlnYG/sys/portrait/item/netdisk.1.7050af2.0LIVnmHKESTaio22r9vMvA.jpg",
+                    "from_uk": 282335,
+                    "groupid": "161744937904444759",
+                    "identity": 0,
+                    "is_official": 0,
+                    "link": "",
+                    "link_count": 0,
+                    "link_type": 0,
+                    "msg": "\u60a8\u9080\u8bf7\u4e86WC***XY\u52a0\u5165\u4f1a\u8bdd",
+                    "msg_tpl": {
+                        "msg": "\u60a8\u9080\u8bf7\u4e86%s\u52a0\u5165\u4f1a\u8bdd",
+                        "uk": [
+                            2630545234
+                        ],
+                        "uname": [
+                            "WC***XY"
+                        ]
+                    },
+                    "msgid": "1458992077334913382",
+                    "msgtype": 103,
+                    "sendtype": 4,
+                    "sessionid": "04_161744937904444759",
+                    "user_label": 0,
+                    "widget_info": null
+                },
+                {
+                    "cursor": 1695691955312,
+                    "displayname": "\u7cfb\u7edf\u901a\u77e5",
+                    "file_list": [],
+                    "from_avatar": "https://ss0.bdstatic.com/7Ls0a8Sm1A5BphGlnYG/sys/portrait/item/netdisk.1.7050af2.0LIVnmHKESTaio22r9vMvA.jpg",
+                    "from_uk": 282335,
+                    "groupid": "161744937904444759",
+                    "identity": 0,
+                    "is_official": 0,
+                    "link": "",
+                    "link_count": 0,
+                    "link_type": 0,
+                    "msg": "\u7fa4\u7ec4\u5df2\u521b\u5efa\u6210\u529f",
+                    "msgid": "6675575356217887432",
+                    "msgtype": 103,
+                    "sendtype": 4,
+                    "sessionid": "04_161744937904444759",
+                    "user_label": 0,
+                    "widget_info": null
+                }
+            ],
+            "sessionicon": [
+                "https://himg.bdimg.com/sys/portrait/item/public.1.bef28233.RZ8MTOcoLQmi3jorQuPoww.jpg",
+                "https://himg.bdimg.com/sys/portrait/item/public.1.ec0ac0cb.sj2Jby5ixRRPD6lDLcZ_ew.jpg"
+            ],
+            "sessionid": "04_161744937904444759",
+            "sessionname": "\u68a6**\u5fc3\u6b87\u3001WC***XY",
+            "sessiontype": 4
+        }
+    ],
+    "show_msg": "",
+    "timestamp": 1695693514
+}

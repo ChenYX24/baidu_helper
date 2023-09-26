@@ -642,12 +642,57 @@ class BaiDuPan(object):
             'user_list': json.dumps(user_list),
             'bdstoken': 'c1bf432f74b461320ff1a46c5c0d38a0',
         }
-        print(param)
         response = requests.post(url, headers=self.headers, params=param)
         response_content = json.loads(response.content.decode("utf-8"))
         return response_content
 
 
+    def search_friend(self):
+        """
+        查找用户（用于添加好友）
+        """
+        url="https://pan.baidu.com/mbox/usergroup/search"
+
+
+    def get_group_qrcode(self,gid):
+        """
+        获取群组二维码
+        """
+        url="https://pan.baidu.com/mbox/group/qrcode"
+        param = {
+            'gid': gid,
+        }
+        response = requests.get(url, headers=self.headers, params=param)
+        if response.status_code==200:
+            with open('./files/qrcode.png', 'wb') as file:
+                file.write(response.content)
+            return {'errno': 0, 'err_msg': '获取成功'}
+        else:
+            return {'errno': 1, 'err_msg': '获取失败'}
+
+    def get_group_info(self,gid):
+        """
+        查找群组信息
+        """
+        sid=[f"04_{gid}"]
+        url="https://pan.baidu.com/imbox/msg/pull"
+        param = {
+            'clienttype': '0',
+            'app_id': '250528',
+            'web': '1',
+            'dp-logid': '35241200798402820077',
+        }
+        sid_json = json.dumps(sid)
+        form_data = {
+            'pulltype': '1',
+            'sids': sid_json,
+            'needprofile': "1",
+            'identity': "0",
+            'showlink': "true",
+        }
+        response = requests.post(url, headers=self.headers, params=param, data=form_data)
+        response_content = json.loads(response.content.decode("utf-8"))
+        return response_content
 
 if __name__ == "__main__":
     baidu = BaiDuPan()
@@ -704,4 +749,7 @@ if __name__ == "__main__":
     # print(r)
 
     #创建群组
-    print(baidu.create_group())
+    # print(baidu.create_group())
+    # baidu.get_group_qrcode(161744937904444759)
+
+    baidu.saveJson('./files/group_info.json',baidu.get_group_info (161744937904444759))#"04_+(groupid)"

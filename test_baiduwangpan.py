@@ -162,5 +162,11 @@ def test_get_quota():
     assert (r['used'] != 0)
     print(r['total'] ,r['used'])
 
+def test_get_group_qrcode():
+    r=baidu.get_group_qrcode(161744937904444759)
+    assert (r['errno'] == 0)
 
-test_get_quota()
+def test_get_group_info():
+    r=baidu.get_group_info(161744937904444759)
+    assert (r['errno'] == 0)
+    assert (len(r['sessions']) != 0)
