@@ -20,7 +20,7 @@ class BaiDuPan(object):
             'Host': 'pan.baidu.com',
             'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.120 Safari/537.36',
         }
-        self.headers['Cookie'] = 'BIDUPSID=69E28713CEF4C74FC5B9B97E2E3E9651; PSTM=1686308325; BAIDUID=69E28713CEF4C74FFE683719516B4A50:FG=1; ZFY=Te0ugrPfZ:BGiG:BnHsCyv:AOr9ZvJr:AMJ1nNzVn:B4cqao:C; BAIDUID_BFESS=69E28713CEF4C74FFE683719516B4A50:FG=1; newlogin=1; BDUSS=WlOUG1FNjlmTnU4bndoaXAza0RkanVMSEJIZGV1aFlJZmVPdE9EZ2lWcDcyVEJsSVFBQUFBJCQAAAAAAAAAAAEAAAAqoj5iw87Q0div0MTp5AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHtMCWV7TAllZ; BDUSS_BFESS=WlOUG1FNjlmTnU4bndoaXAza0RkanVMSEJIZGV1aFlJZmVPdE9EZ2lWcDcyVEJsSVFBQUFBJCQAAAAAAAAAAAEAAAAqoj5iw87Q0div0MTp5AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHtMCWV7TAllZ; STOKEN=e2cf9f58dd40c71548dd5b7b83a63bdf8ef9f41d2c34dde2bb030bed97a03284; PANWEB=1; csrfToken=JSOeVxFSx5KYLwZa2zG7bRzl; ZD_ENTRY=google; PANPSC=2990345679051733335%3ACU2JWesajwDE3oP99pMv7xGy4OU887ORVNbGxeMGSdR7gvgDy7JBfVZyeLTzW4IXgEmtLzrwSnIr2wqYbSNJzI7%2BuszIM%2FQFkx%2F15WNPx3cuRevHA8Yw6ivUNQZ%2Bmpo%2BKs%2BlyV4xxrIh7IX89yGaj01oE1oKWHdrHwnsXTVs8ITR4SeWmT6baF9K9yVk1uvA4i2i1JdCg%2BQoj3hBKvZymPgT7Eg6UyTb; ndut_fmt=E7460424E9E1C678F2A162E5CD7FE6917B5E93CC331CEFB52B11F0E6E137EABB; ab_sr=1.0.1_NjBjMmQ4ZmMyNWNkMTdlMWE1OGNmZDllMTQ2MjcyOWMzZjFmNzFmYzZjNGRkYWFkZTk2ODAwN2I5YTA1NTkwOTRlZTE3YWJhNjhkNjk1YzliZTkyMGI3YmI5MjA3Y2I5ZTE3NTkwZmI0NDIyODJkYzE2ODExMjViMmJjZDVjOGM5MzliNzIyYmVlMGM1MTRlYjdiZWZjZTJkNWNkODQyYmRhMTRjYzNhODFlMDAyNWRjNTJjZmUxZjE0NzUyZGJh'
+        self.headers['Cookie'] = 'PANWEB=1; BIDUPSID=569C78CFDF8EDB06B5E81247D1B4D1E4; BAIDUID=9B587808DF1127A51C8E42336B18EC09:FG=1; PSTM=1682797646; BDUSS=3RXNWJ3RVFMbm0zVnk2OH43Rm1EV1RITDBReERjUFk3b1BxN1QzVk9GaDVNcUJrRVFBQUFBJCQAAAAAAAAAAAEAAAChnI3OV0NDWVpYWQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHmleGR5pXhkR; BDUSS_BFESS=3RXNWJ3RVFMbm0zVnk2OH43Rm1EV1RITDBReERjUFk3b1BxN1QzVk9GaDVNcUJrRVFBQUFBJCQAAAAAAAAAAAEAAAChnI3OV0NDWVpYWQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHmleGR5pXhkR; Hm_lvt_7a3960b6f067eb0085b7f96ff5e660b0=1689001027; STOKEN=76dca0c6950b2721c2b3968a150bdac0628d40c59cab9b57793eb9cf33154508; newlogin=1; BDCLND=C5yyAmZyfB29vVwj7jZkBqPWOg8%2FRAP48Iwdr9Ud3dg%3D; BAIDUID_BFESS=9B587808DF1127A51C8E42336B18EC09:FG=1; ZFY=WkFG8KgRo4:BDXp5tefZD3SA2lJrVe:A7hUYR:AHZlokoI:C; BDRCVFR[TCFer5TLIzY]=mk3SLVN4HKm; BA_HECTOR=208g24ag05ak0haha40g24ag1ih5seu1p; BDRCVFR[A7hGrXFW48R]=K7PavkeTFPTUAN8ULuEQhPEUi4WU6; delPer=0; PSINO=7; H_PS_PSSID=; BCLID=10723810273180813457; BCLID_BFESS=10723810273180813457; BDSFRCVID=pg-OJexroG0Jp3jqLw4muRncd9NbUdrTDYrEjGc3VtzSGYLVFsQ6EG0Pts1-dEub6j30ogKK3gOTH4DF_2uxOjjg8UtVJeC6EG0Ptf8g0M5; BDSFRCVID_BFESS=pg-OJexroG0Jp3jqLw4muRncd9NbUdrTDYrEjGc3VtzSGYLVFsQ6EG0Pts1-dEub6j30ogKK3gOTH4DF_2uxOjjg8UtVJeC6EG0Ptf8g0M5; H_BDCLCKID_SF=tbC8VCDKJKD3qbjkq45HMt00qxby26nj5-j9aJ5y-J7nhhcxDP6aXbb3hqoN2tJbfmoa-Rb-QpbZql5FQP-53R0h0PJkWp5l-aCqKl0MLPb5hj6gQJoDj4TyDMnMBMPe52OnaIbg3fAKftnOM46JehL3346-35543bRTLnLy5KJYMDcnK4-Xj5jQeHrP; H_BDCLCKID_SF_BFESS=tbC8VCDKJKD3qbjkq45HMt00qxby26nj5-j9aJ5y-J7nhhcxDP6aXbb3hqoN2tJbfmoa-Rb-QpbZql5FQP-53R0h0PJkWp5l-aCqKl0MLPb5hj6gQJoDj4TyDMnMBMPe52OnaIbg3fAKftnOM46JehL3346-35543bRTLnLy5KJYMDcnK4-Xj5jQeHrP; csrfToken=v5IC7-rm_lKgEZFaeH6u8YG7; ndut_fmt=73DC3A21E162D4394B5709D978EE1C6DA1BB1BBD95EA72C7478D7604F7D06CC0; ab_sr=1.0.1_ZDQ3NGQ3MWZhMWEzMTUyNGZjZjAwMzVjZDc2ZWZiMzVmNTNmZWU4ZGJlNTZiYmMyOTQ1MzBmYzM4OWVjMmVjZTEzODUzZWRjMjdiYzZjNWYzYTM2NjY5ZGFhZjZiZDNjNmY4ZGZhMDNiOTU5NTNjNzZhZmRkZmQzZmVkYzQyODJjMmU4MDllMDliM2YyZmFiMTQ1NjY1YWJiM2MxMjkzMDIxMDU0YjFiODc2ZjAyOTEwMjYzNWQ4MTI3YWMwZDc1; PANPSC=9170099943376432969%3A1hnZu9bM3mybvTOBvRZ%2F5lcS2d9ns3O5g0mIZdLHpdQGbqupDlB1gj8zEKyc7S8aV7l9pmSq0a3iLaLUl0KD5De4ZdaW7CoOlL98c8Ccr9ch6uZoP3DwQzAw93c%2B99RlVpGLhc1ipSKNShoTQEg8jaRP5oS8US4%2B%2B9Pr2MG%2FYMcbn7HyuQkxD4BUWlfXuWBG'
 
 
     @staticmethod
@@ -694,6 +694,37 @@ class BaiDuPan(object):
         response_content = json.loads(response.content.decode("utf-8"))
         return response_content
 
+
+    def transfer(self, from_uk, msg_id, dest, fs_ids, gid):
+        url = "https://pan.baidu.com/mbox/msg/transfer"
+        param = {
+            'channel': 'chunlei',
+            'clienttype': '0',
+            'web': '1',
+            'app_id': '250528',
+            'logId': 'MTY1NzY4NTkxOTkxMjAuMzE2Mjg3MzEzMTczMDk0MzM=',
+            'bdstoken': '7ddec910b0beba5b3380362518c759bd',
+            'clienttype': '0',
+            'app_id': '250528',
+            'dp-logid': '78322200402521660089'
+        }
+        data = {
+            'from_uk': from_uk,
+            'msg_id': msg_id,
+            'path': dest,
+            'ondup': 'newcopy',
+            'async': '1',
+            'fs_ids': fs_ids,
+            'type': '2',
+            'gid': gid
+        }
+        response = requests.post(url, headers=self.headers, params=param, data=data)
+        json_data = response.json()
+        if json_data['errno'] == 0:
+            return {'errno': 0, 'err_msg': '保存成功', 'data': json_data}
+        else:
+            return {'errno': 1, 'err_msg': '保存失败', 'data': json_data}
+
 if __name__ == "__main__":
     baidu = BaiDuPan()
     # file_content = baidu.get_file_list(dir='/test')
@@ -748,8 +779,12 @@ if __name__ == "__main__":
     # r = baidu.file_library_search("线代")
     # print(r)
 
+    # 保存文件库文件到网盘
+    r = baidu.transfer('3355235038', '4774198092861403563', '/我的资源', '[982632035638391,582337169083076]', '1087053125946517873')
+    print(r)
+
     #创建群组
     # print(baidu.create_group())
     # baidu.get_group_qrcode(161744937904444759)
 
-    baidu.saveJson('./files/group_info.json',baidu.get_group_info (161744937904444759))#"04_+(groupid)"
+    # baidu.saveJson('./files/group_info.json',baidu.get_group_info (161744937904444759))#"04_+(groupid)"
