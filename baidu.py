@@ -1,32 +1,28 @@
 # coding="utf-8"
 import string
-
 import requests
-import re
 import json
-import time
 import random
 import os
 
 
-'''
-'''
-
-
-class BaiDuPan(object):
+class BaiDuWangPan(object):
     def __init__(self):
         self.retry_limit = 3
         self.headers = {
             'Host': 'pan.baidu.com',
             'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.120 Safari/537.36',
         }
-        self.headers['Cookie'] = 'PANWEB=1; BIDUPSID=569C78CFDF8EDB06B5E81247D1B4D1E4; BAIDUID=9B587808DF1127A51C8E42336B18EC09:FG=1; PSTM=1682797646; BDUSS=3RXNWJ3RVFMbm0zVnk2OH43Rm1EV1RITDBReERjUFk3b1BxN1QzVk9GaDVNcUJrRVFBQUFBJCQAAAAAAAAAAAEAAAChnI3OV0NDWVpYWQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHmleGR5pXhkR; BDUSS_BFESS=3RXNWJ3RVFMbm0zVnk2OH43Rm1EV1RITDBReERjUFk3b1BxN1QzVk9GaDVNcUJrRVFBQUFBJCQAAAAAAAAAAAEAAAChnI3OV0NDWVpYWQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHmleGR5pXhkR; Hm_lvt_7a3960b6f067eb0085b7f96ff5e660b0=1689001027; STOKEN=76dca0c6950b2721c2b3968a150bdac0628d40c59cab9b57793eb9cf33154508; newlogin=1; BDCLND=C5yyAmZyfB29vVwj7jZkBqPWOg8%2FRAP48Iwdr9Ud3dg%3D; BAIDUID_BFESS=9B587808DF1127A51C8E42336B18EC09:FG=1; ZFY=WkFG8KgRo4:BDXp5tefZD3SA2lJrVe:A7hUYR:AHZlokoI:C; BDRCVFR[TCFer5TLIzY]=mk3SLVN4HKm; BA_HECTOR=208g24ag05ak0haha40g24ag1ih5seu1p; BDRCVFR[A7hGrXFW48R]=K7PavkeTFPTUAN8ULuEQhPEUi4WU6; delPer=0; PSINO=7; H_PS_PSSID=; BCLID=10723810273180813457; BCLID_BFESS=10723810273180813457; BDSFRCVID=pg-OJexroG0Jp3jqLw4muRncd9NbUdrTDYrEjGc3VtzSGYLVFsQ6EG0Pts1-dEub6j30ogKK3gOTH4DF_2uxOjjg8UtVJeC6EG0Ptf8g0M5; BDSFRCVID_BFESS=pg-OJexroG0Jp3jqLw4muRncd9NbUdrTDYrEjGc3VtzSGYLVFsQ6EG0Pts1-dEub6j30ogKK3gOTH4DF_2uxOjjg8UtVJeC6EG0Ptf8g0M5; H_BDCLCKID_SF=tbC8VCDKJKD3qbjkq45HMt00qxby26nj5-j9aJ5y-J7nhhcxDP6aXbb3hqoN2tJbfmoa-Rb-QpbZql5FQP-53R0h0PJkWp5l-aCqKl0MLPb5hj6gQJoDj4TyDMnMBMPe52OnaIbg3fAKftnOM46JehL3346-35543bRTLnLy5KJYMDcnK4-Xj5jQeHrP; H_BDCLCKID_SF_BFESS=tbC8VCDKJKD3qbjkq45HMt00qxby26nj5-j9aJ5y-J7nhhcxDP6aXbb3hqoN2tJbfmoa-Rb-QpbZql5FQP-53R0h0PJkWp5l-aCqKl0MLPb5hj6gQJoDj4TyDMnMBMPe52OnaIbg3fAKftnOM46JehL3346-35543bRTLnLy5KJYMDcnK4-Xj5jQeHrP; csrfToken=v5IC7-rm_lKgEZFaeH6u8YG7; ndut_fmt=73DC3A21E162D4394B5709D978EE1C6DA1BB1BBD95EA72C7478D7604F7D06CC0; ab_sr=1.0.1_ZDQ3NGQ3MWZhMWEzMTUyNGZjZjAwMzVjZDc2ZWZiMzVmNTNmZWU4ZGJlNTZiYmMyOTQ1MzBmYzM4OWVjMmVjZTEzODUzZWRjMjdiYzZjNWYzYTM2NjY5ZGFhZjZiZDNjNmY4ZGZhMDNiOTU5NTNjNzZhZmRkZmQzZmVkYzQyODJjMmU4MDllMDliM2YyZmFiMTQ1NjY1YWJiM2MxMjkzMDIxMDU0YjFiODc2ZjAyOTEwMjYzNWQ4MTI3YWMwZDc1; PANPSC=9170099943376432969%3A1hnZu9bM3mybvTOBvRZ%2F5lcS2d9ns3O5g0mIZdLHpdQGbqupDlB1gj8zEKyc7S8aV7l9pmSq0a3iLaLUl0KD5De4ZdaW7CoOlL98c8Ccr9ch6uZoP3DwQzAw93c%2B99RlVpGLhc1ipSKNShoTQEg8jaRP5oS8US4%2B%2B9Pr2MG%2FYMcbn7HyuQkxD4BUWlfXuWBG'
-
+        self.headers[
+            'Cookie'] = 'PANWEB=1; BIDUPSID=569C78CFDF8EDB06B5E81247D1B4D1E4; BAIDUID=9B587808DF1127A51C8E42336B18EC09:FG=1; PSTM=1682797646; BDUSS=3RXNWJ3RVFMbm0zVnk2OH43Rm1EV1RITDBReERjUFk3b1BxN1QzVk9GaDVNcUJrRVFBQUFBJCQAAAAAAAAAAAEAAAChnI3OV0NDWVpYWQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHmleGR5pXhkR; BDUSS_BFESS=3RXNWJ3RVFMbm0zVnk2OH43Rm1EV1RITDBReERjUFk3b1BxN1QzVk9GaDVNcUJrRVFBQUFBJCQAAAAAAAAAAAEAAAChnI3OV0NDWVpYWQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHmleGR5pXhkR; Hm_lvt_7a3960b6f067eb0085b7f96ff5e660b0=1689001027; STOKEN=76dca0c6950b2721c2b3968a150bdac0628d40c59cab9b57793eb9cf33154508; newlogin=1; BDCLND=C5yyAmZyfB29vVwj7jZkBqPWOg8%2FRAP48Iwdr9Ud3dg%3D; BAIDUID_BFESS=9B587808DF1127A51C8E42336B18EC09:FG=1; ZFY=WkFG8KgRo4:BDXp5tefZD3SA2lJrVe:A7hUYR:AHZlokoI:C; BDRCVFR[TCFer5TLIzY]=mk3SLVN4HKm; BA_HECTOR=208g24ag05ak0haha40g24ag1ih5seu1p; BDRCVFR[A7hGrXFW48R]=K7PavkeTFPTUAN8ULuEQhPEUi4WU6; delPer=0; PSINO=7; H_PS_PSSID=; BCLID=10723810273180813457; BCLID_BFESS=10723810273180813457; BDSFRCVID=pg-OJexroG0Jp3jqLw4muRncd9NbUdrTDYrEjGc3VtzSGYLVFsQ6EG0Pts1-dEub6j30ogKK3gOTH4DF_2uxOjjg8UtVJeC6EG0Ptf8g0M5; BDSFRCVID_BFESS=pg-OJexroG0Jp3jqLw4muRncd9NbUdrTDYrEjGc3VtzSGYLVFsQ6EG0Pts1-dEub6j30ogKK3gOTH4DF_2uxOjjg8UtVJeC6EG0Ptf8g0M5; H_BDCLCKID_SF=tbC8VCDKJKD3qbjkq45HMt00qxby26nj5-j9aJ5y-J7nhhcxDP6aXbb3hqoN2tJbfmoa-Rb-QpbZql5FQP-53R0h0PJkWp5l-aCqKl0MLPb5hj6gQJoDj4TyDMnMBMPe52OnaIbg3fAKftnOM46JehL3346-35543bRTLnLy5KJYMDcnK4-Xj5jQeHrP; H_BDCLCKID_SF_BFESS=tbC8VCDKJKD3qbjkq45HMt00qxby26nj5-j9aJ5y-J7nhhcxDP6aXbb3hqoN2tJbfmoa-Rb-QpbZql5FQP-53R0h0PJkWp5l-aCqKl0MLPb5hj6gQJoDj4TyDMnMBMPe52OnaIbg3fAKftnOM46JehL3346-35543bRTLnLy5KJYMDcnK4-Xj5jQeHrP; csrfToken=v5IC7-rm_lKgEZFaeH6u8YG7; ndut_fmt=73DC3A21E162D4394B5709D978EE1C6DA1BB1BBD95EA72C7478D7604F7D06CC0; ab_sr=1.0.1_ZDQ3NGQ3MWZhMWEzMTUyNGZjZjAwMzVjZDc2ZWZiMzVmNTNmZWU4ZGJlNTZiYmMyOTQ1MzBmYzM4OWVjMmVjZTEzODUzZWRjMjdiYzZjNWYzYTM2NjY5ZGFhZjZiZDNjNmY4ZGZhMDNiOTU5NTNjNzZhZmRkZmQzZmVkYzQyODJjMmU4MDllMDliM2YyZmFiMTQ1NjY1YWJiM2MxMjkzMDIxMDU0YjFiODc2ZjAyOTEwMjYzNWQ4MTI3YWMwZDc1; PANPSC=9170099943376432969%3A1hnZu9bM3mybvTOBvRZ%2F5lcS2d9ns3O5g0mIZdLHpdQGbqupDlB1gj8zEKyc7S8aV7l9pmSq0a3iLaLUl0KD5De4ZdaW7CoOlL98c8Ccr9ch6uZoP3DwQzAw93c%2B99RlVpGLhc1ipSKNShoTQEg8jaRP5oS8US4%2B%2B9Pr2MG%2FYMcbn7HyuQkxD4BUWlfXuWBG'
+        self.app_id = "250528"
+        self.dp_logid = '91380000697342040025'
+        self.bdstoken = 'c1bf432f74b461320ff1a46c5c0d38a0'
 
     @staticmethod
     def saveJson(title, data):  # 将数据保存为json文件
         if not os.path.exists(title):
-          # 路径不存在则先创一个
+            # 路径不存在则先创一个
             os.makedirs(os.path.dirname(title), exist_ok=True)
             with open(title, 'w') as f:
                 f.write('')
@@ -51,24 +47,27 @@ class BaiDuPan(object):
             random_string += random.choice(chars)
         return random_string
 
-    def get_file_list(self, dir='/', retry=0):
+    def set_cookie(self, cookie):
+        self.headers['Cookie'] = cookie
+
+    def get_file_list(self, dir_path='/', retry=0):
         # 加载之前保存的进度
         progress = self.readJson('./files/progress.json')
-        if progress is not None and dir in progress:
+        if progress is not None and dir_path in progress:
             # 如果已经遍历过该目录，直接从进度中获取列表
-            file_list = progress[dir]
+            file_list = progress[dir_path]
         else:
-            print(f'遍历路径 {dir}中...')
+            print(f'遍历路径 {dir_path}中...')
             url = 'https://pan.baidu.com/api/list'
             # 载荷数据
             payload = {
                 'clienttype': '0',
-                'app_id': '250528',
+                'app_id': self.app_id,
                 'web': '1',
-                'dp-logid': '91380000697342040025',
+                'dp-logid': self.dp_logid,
                 'order': 'time',
                 'desc': '1',
-                'dir': f'{dir}',
+                'dir': f'{dir_path}',
                 'num': '100',
                 'page': '1'
             }
@@ -88,15 +87,15 @@ class BaiDuPan(object):
         # 载荷数据
         params = {
             'clienttype': '0',
-            'app_id': '250528',
+            'app_id': self.app_id,
             'web': '1',
-            'dp-logid': '23758300368469790051',
+            'dp-logid': self.dp_logid,
             'order': 'time',
             'desc': '1',
             'num': '100',
             'page': '1',
             'recursion': f'{recursion}',  # 递归子目录数
-            'key': f'{keyword}'      # 查找内容
+            'key': f'{keyword}'  # 查找内容
         }
 
         # get
@@ -111,11 +110,11 @@ class BaiDuPan(object):
         url = 'https://pan.baidu.com/api/create'
         payload = {
             'a': 'commit',
-            'bdstoken': '8a902ff8d133bc0b26e061b565dffe53',
+            'bdstoken': self.bdstoken,
             'clienttype': '0',
-            'app_id': '250528',
+            'app_id': self.app_id,
             'web': '1',
-            'dp-logid': '43865200699754060045',
+            'dp-logid': self.dp_logid,
         }
         form_data = {
             'path': f'{path}{folder_name}',
@@ -139,7 +138,7 @@ class BaiDuPan(object):
             'bdstoken': 'c1bf432f74b461320ff1a46c5c0d38a0',
             'newVerify': '1',
             'clienttype': '0',
-            'app_id': '250528',
+            'app_id': self.app_id,
             'web': '1',
             'dp-logid': '78491000811514990047',
         }
@@ -164,7 +163,7 @@ class BaiDuPan(object):
             'opera': 'rename',
             'bdstoken': 'c1bf432f74b461320ff1a46c5c0d38a0',
             'clienttype': '0',
-            'app_id': '250528',
+            'app_id': self.app_id,
             'web': '1',
             'dp-logid': '35893700578085580069',
         }
@@ -193,9 +192,9 @@ class BaiDuPan(object):
             'opera': 'copy',
             'bdstoken': 'c1bf432f74b461320ff1a46c5c0d38a0',
             'clienttype': '0',
-            'app_id': '250528',
+            'app_id': self.app_id,
             'web': '1',
-            'dp-logid': '48507800776512390044',
+            'dp-logid': self.dp_logid,
         }
         for item in copy_list:
             if not item.get('newname'):
@@ -223,9 +222,9 @@ class BaiDuPan(object):
             'opera': 'move',
             'bdstoken': 'c1bf432f74b461320ff1a46c5c0d38a0',
             'clienttype': '0',
-            'app_id': '250528',
+            'app_id': self.app_id,
             'web': '1',
-            'dp-logid': '48507800776512390044',
+            'dp-logid': self.dp_logid,
         }
         for item in move_list:
             if not item.get('newname'):
@@ -245,12 +244,12 @@ class BaiDuPan(object):
         """
         preurl = 'https://pan.baidu.com/api/precreate'
         payload = {
-            'bdstoken': 'c1bf432f74b461320ff1a46c5c0d38a0',
-            'app_id': '250528',
+            'bdstoken': self.bdstoken,
+            'app_id': self.app_id,
             'channel': 'chunlei',
             'web': '1',
             'clienttype': '0',
-            'dp-logid': '48507800776512390044',
+            'dp-logid': self.dp_logid,
         }
         form_data = {
             'path': '/test/kid1/files/file_content.json',
@@ -277,7 +276,7 @@ class BaiDuPan(object):
         super_payload = {
             'method': 'upload',
             'logid': 'MTY5NTE5MTU1MzQ4MTAuMjE2MTU2ODI0MDQ3NTkxNzM=',
-            'app_id': '250528',
+            'app_id': self.app_id,
             'channel': 'chunlei',
             'web': '1',
             'path': '%2Ftest%2Fkid1%2Ffiles%2Ffile_content.json',
@@ -285,7 +284,7 @@ class BaiDuPan(object):
             'clienttype': '0',
             'uploadsign': '0',
             'partseq': '0',
-            'dp-logid': '48507800776512390044',
+            'dp-logid': self.dp_logid,
         }
         super_form_data = {
             'file': '',  # 二进制内容
@@ -301,12 +300,12 @@ class BaiDuPan(object):
 
         payload = {
             'isdir': '0',
-            'bdstoken': 'c1bf432f74b461320ff1a46c5c0d38a0',
-            'app_id': '250528',
+            'bdstoken': self.bdstoken,
+            'app_id': self.app_id,
             'channel': 'chunlei',
             'web': '1',
             'clienttype': '0',
-            'dp-logid': '48507800776512390044',
+            'dp-logid': self.dp_logid,
         }
         form_data = {
             'path': '/test/kid1/files/file_content.json',
@@ -347,11 +346,11 @@ class BaiDuPan(object):
         url = 'https://pan.baidu.com/share/set'
         params = {
             'channel': 'chunlei',
-            'bdstoken': '7ddec910b0beba5b3380362518c759bd',
+            'bdstoken': self.bdstoken,
             'clienttyoe': 0,
-            'app_id': 250528,
+            'app_id': self.app_id,
             'web': 1,
-            'dp-logid': '48041200215572110069'
+            'dp-logid': self.dp_logid
         }
         if (pwd):
             pwd = self.randomStr(4)
@@ -387,9 +386,9 @@ class BaiDuPan(object):
         url = 'https://pan.baidu.com/imbox/msg/send'
         params = {
             'clienttype': '0',
-            'app_id': '250528',
+            'app_id': self.app_id,
             'web': '1',
-            'dp-logid': '48041200215572110132'
+            'dp-logid': self.dp_logid
         }
         _data = {
             "send_type": send_type,
@@ -417,9 +416,9 @@ class BaiDuPan(object):
         url = "https://pan.baidu.com/mbox/group/list"
         params = {
             'clienttype': '0',
-            'app_id': '250528',
+            'app_id': self.app_id,
             'web': '1',
-            'dp-logid': '48041200215572110132',
+            'dp-logid': self.dp_logid,
             'start': 0,
             'limit': 20,
             'type': 0
@@ -438,9 +437,9 @@ class BaiDuPan(object):
         url = "https://pan.baidu.com/mbox/relation/getfollowlist"
         params = {
             'clienttype': '0',
-            'app_id': '250528',
+            'app_id': self.app_id,
             'web': '1',
-            'dp-logid': '48041200215572110132',
+            'dp-logid': self.dp_logid,
             'start': 0,
             'limit': 20
         }
@@ -452,11 +451,11 @@ class BaiDuPan(object):
             return {'errno': 1, 'err_msg': '获取失败', 'data': json_data}
 
     def get_recycle_list(self):
-        url="https://pan.baidu.com/api/recycle/list"
+        url = "https://pan.baidu.com/api/recycle/list"
         # 载荷数据
         payload = {
             'clienttype': '0',
-            'app_id': '250528',
+            'app_id': self.app_id,
             'web': '1',
             'dp-logid': '91380000697342040025',
             'num': '100',
@@ -466,19 +465,19 @@ class BaiDuPan(object):
         response = requests.get(url, data=payload, headers=self.headers)
         return json.loads(response.content.decode("utf-8"))
 
-    def recycle_delete(self,delete_list):
+    def recycle_delete(self, delete_list):
         """
         删除回收站文件，传入id列表
         """
-        url="https://pan.baidu.com/api/recycle/delete"
+        url = "https://pan.baidu.com/api/recycle/delete"
         payload = {
-            'bdstoken': 'c1bf432f74b461320ff1a46c5c0d38a0',
-            'app_id': '250528',
+            'bdstoken': self.bdstoken,
+            'app_id': self.app_id,
             'channel': 'chunlei',
             'web': '1',
             'clienttype': '0',
-            'dp-logid': '48507800776512390044',
-            'async':'1',
+            'dp-logid': self.dp_logid,
+            'async': '1',
         }
         delete_list_json = json.dumps(delete_list)
         form_data = {
@@ -488,19 +487,19 @@ class BaiDuPan(object):
         response_content = json.loads(response.content.decode("utf-8"))
         return response_content
 
-    def recycle_restore(self,restore_list):
+    def recycle_restore(self, restore_list):
         """
         还原回收站文件，传入id列表
         """
-        url="https://pan.baidu.com/api/recycle/restore"
+        url = "https://pan.baidu.com/api/recycle/restore"
         payload = {
-            'bdstoken': 'c1bf432f74b461320ff1a46c5c0d38a0',
-            'app_id': '250528',
+            'bdstoken': self.bdstoken,
+            'app_id': self.app_id,
             'channel': 'chunlei',
             'web': '1',
             'clienttype': '0',
-            'dp-logid': '48507800776512390044',
-            'async':'1',
+            'dp-logid': self.dp_logid,
+            'async': '1',
         }
         restore_list_json = json.dumps(restore_list)
         form_data = {
@@ -514,32 +513,32 @@ class BaiDuPan(object):
         """
         清空回收站
         """
-        url='https://pan.baidu.com/api/recycle/clear'
+        url = 'https://pan.baidu.com/api/recycle/clear'
         payload = {
-            'bdstoken': 'c1bf432f74b461320ff1a46c5c0d38a0',
-            'app_id': '250528',
+            'bdstoken': self.bdstoken,
+            'app_id': self.app_id,
             'channel': 'chunlei',
             'web': '1',
             'clienttype': '0',
-            'dp-logid': '48507800776512390044',
-            'async':'1',
+            'dp-logid': self.dp_logid,
+            'async': '1',
         }
         response = requests.post(url, headers=self.headers, params=payload)
         response_content = json.loads(response.content.decode("utf-8"))
         return response_content
 
-    def test_task_status(self,taskid):
+    def test_task_status(self, taskid):
         """
         测试任务状态
         """
-        url="https://pan.baidu.com/share/taskquery"
+        url = "https://pan.baidu.com/share/taskquery"
         payload = {
-            'app_id': '250528',
+            'app_id': self.app_id,
             'channel': 'chunlei',
             'web': '1',
             'clienttype': '0',
-            'dp-logid': '48507800776512390044',
-            'taskid':f"{taskid}",
+            'dp-logid': self.dp_logid,
+            'taskid': f"{taskid}",
         }
         response = requests.post(url, headers=self.headers, params=payload)
         response_content = json.loads(response.content.decode("utf-8"))
@@ -549,27 +548,27 @@ class BaiDuPan(object):
         """
         获取容量，返回total和used
         """
-        url='https://pan.baidu.com/api/quota'
+        url = 'https://pan.baidu.com/api/quota'
         payload = {
-            'app_id': '250528',
+            'app_id': self.app_id,
             'web': '1',
             'clienttype': '0',
-            'dp-logid': '48507800776512390044',
+            'dp-logid': self.dp_logid,
         }
         response = requests.get(url, headers=self.headers, params=payload)
         response_content = json.loads(response.content.decode("utf-8"))
-        #单位为GB
-        response_content['total']=response_content['total']/(1024*1024*1024)
-        response_content['used']=response_content['used']/(1024*1024*1024)
+        # 单位为GB
+        response_content['total'] = response_content['total'] / (1024 * 1024 * 1024)
+        response_content['used'] = response_content['used'] / (1024 * 1024 * 1024)
         return response_content
 
     def get_file_library_share_list(self, gid):
         url = "https://pan.baidu.com/mbox/group/listshare"
         param = {
             'clienttype': '0',
-            'app_id': '250528',
+            'app_id': self.app_id,
             'web': '1',
-            'dp-logid': '61012000932444830068',
+            'dp-logid': self.dp_logid,
             'type': '2',
             'gid': gid,
             'limit': '50',
@@ -595,9 +594,9 @@ class BaiDuPan(object):
             'limit': '50',
             'desc': '1',
             'clienttype': '0',
-            'app_id': '250528',
+            'app_id': self.app_id,
             'web': '1',
-            'dp-logid': '61012000932444830074'
+            'dp-logid': self.dp_logid
         }
         response = requests.get(url, headers=self.headers, params=param)
         json_data = response.json()
@@ -610,9 +609,9 @@ class BaiDuPan(object):
         url = "https://pan.baidu.com/basembox/group/search"
         param = {
             'clienttype': '0',
-            'app_id': '250528',
+            'app_id': self.app_id,
             'web': '1',
-            'dp-logid': '61012000932444830074'
+            'dp-logid': self.dp_logid
         }
         _data = {
             "gid": ["1087053125946517873"],
@@ -622,65 +621,63 @@ class BaiDuPan(object):
         data = {
             'data': json.dumps(_data)
         }
-        response = requests.post(url, headers=self.headers, params=param, data = data)
+        response = requests.post(url, headers=self.headers, params=param, data=data)
         json_data = response.json()
         if json_data['errno'] == 0:
             return {'errno': 0, 'err_msg': '获取成功', 'data': json_data['result']}
         else:
             return {'errno': 1, 'err_msg': '获取失败', 'data': json_data}
 
-    def create_group(self,user_list=[]):
+    def create_group(self, user_list=[]):
         """
         创建群组
         """
-        url="https://pan.baidu.com/mbox/group/specialcreate"
+        url = "https://pan.baidu.com/mbox/group/specialcreate"
         param = {
             'clienttype': '0',
-            'app_id': '250528',
+            'app_id': self.app_id,
             'web': '1',
-            'dp-logid': '35241200798402820077',
+            'dp-logid': self.dp_logid,
             'user_list': json.dumps(user_list),
-            'bdstoken': 'c1bf432f74b461320ff1a46c5c0d38a0',
+            'bdstoken': self.bdstoken,
         }
         response = requests.post(url, headers=self.headers, params=param)
         response_content = json.loads(response.content.decode("utf-8"))
         return response_content
 
-
     def search_friend(self):
         """
         查找用户（用于添加好友）
         """
-        url="https://pan.baidu.com/mbox/usergroup/search"
+        url = "https://pan.baidu.com/mbox/usergroup/search"
 
-
-    def get_group_qrcode(self,gid):
+    def get_group_qrcode(self, gid):
         """
         获取群组二维码
         """
-        url="https://pan.baidu.com/mbox/group/qrcode"
+        url = "https://pan.baidu.com/mbox/group/qrcode"
         param = {
             'gid': gid,
         }
         response = requests.get(url, headers=self.headers, params=param)
-        if response.status_code==200:
+        if response.status_code == 200:
             with open('./files/qrcode.png', 'wb') as file:
                 file.write(response.content)
             return {'errno': 0, 'err_msg': '获取成功'}
         else:
             return {'errno': 1, 'err_msg': '获取失败'}
 
-    def get_group_info(self,gid):
+    def get_group_info(self, gid):
         """
         查找群组信息
         """
-        sid=[f"04_{gid}"]
-        url="https://pan.baidu.com/imbox/msg/pull"
+        sid = [f"04_{gid}"]
+        url = "https://pan.baidu.com/imbox/msg/pull"
         param = {
             'clienttype': '0',
-            'app_id': '250528',
+            'app_id': self.app_id,
             'web': '1',
-            'dp-logid': '35241200798402820077',
+            'dp-logid': self.dp_logid,
         }
         sid_json = json.dumps(sid)
         form_data = {
@@ -694,19 +691,16 @@ class BaiDuPan(object):
         response_content = json.loads(response.content.decode("utf-8"))
         return response_content
 
-
     def transfer(self, from_uk, msg_id, dest, fs_ids, gid):
         url = "https://pan.baidu.com/mbox/msg/transfer"
         param = {
             'channel': 'chunlei',
             'clienttype': '0',
             'web': '1',
-            'app_id': '250528',
+            'app_id': self.app_id,
             'logId': 'MTY1NzY4NTkxOTkxMjAuMzE2Mjg3MzEzMTczMDk0MzM=',
-            'bdstoken': '7ddec910b0beba5b3380362518c759bd',
-            'clienttype': '0',
-            'app_id': '250528',
-            'dp-logid': '78322200402521660089'
+            'bdstoken': self.bdstoken,
+            'dp-logid': self.dp_logid
         }
         data = {
             'from_uk': from_uk,
@@ -725,8 +719,9 @@ class BaiDuPan(object):
         else:
             return {'errno': 1, 'err_msg': '保存失败', 'data': json_data}
 
+
 if __name__ == "__main__":
-    baidu = BaiDuPan()
+    baidu = BaiDuWangPan()
     # file_content = baidu.get_file_list(dir='/test')
     # baidu.saveJson('./files/file_content.json', file_content)
     # file_content = baidu.readJson('./files/file_content.json')
@@ -780,11 +775,11 @@ if __name__ == "__main__":
     # print(r)
 
     # 保存文件库文件到网盘
-    r = baidu.transfer('3355235038', '4774198092861403563', '/我的资源', '[982632035638391,582337169083076]', '1087053125946517873')
-    print(r)
+    # r = baidu.transfer('3355235038', '4774198092861403563', '/我的资源', '[982632035638391,582337169083076]', '1087053125946517873')
+    # print(r)
 
-    #创建群组
-    # print(baidu.create_group())
-    # baidu.get_group_qrcode(161744937904444759)
+    # 创建群组
+    print(baidu.create_group())
+    baidu.get_group_qrcode(161744937904444759)
 
     # baidu.saveJson('./files/group_info.json',baidu.get_group_info (161744937904444759))#"04_+(groupid)"
